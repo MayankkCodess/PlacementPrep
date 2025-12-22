@@ -73,34 +73,32 @@ const DashboardPage = () => {
 
         {/* Statistics Cards For Dashboard Page*/}
 
-        <div className="stats">
           <div className="flex justify-between">
-            <div className="p-4 rounded-md bg-[#18252C]">
-              <p className="">Recent Interviews</p>
-              <h3>5</h3>
-              <a href="">View All</a>
+            <div className="w-72 rounded-md bg-[#18252C]">
+              <p className="text-[#9DB0B9] text-sm">Recent Interviews</p>
+              <h1 className="text-[#E5E7EB]" >5</h1>
+              <a href="" className="text-[#53A5ED] text-xs">View All</a>
             </div>
-            <div className="p-4 rounded-md bg-[#18252C]">
-              <p>Upcoming Mock</p>
-              <h3>Dec 15,2023</h3>
-              <a href="">View Schedule</a>
+            <div className="w-72 rounded-md bg-[#18252C]">
+              <p className="text-[#9DB0B9] text-sm" >Upcoming Mock</p>
+              <h1 className="text-[#E5E7EB] font-extrabold" >Dec 15,2023</h1>
+              <a href=""  className="text-[#53A5ED] text-xs">View Schedule</a>
             </div>
-            <div className="p-4 rounded-md bg-[#18252C]">
-              <p>Latest Score</p>
-              <h3>89%</h3>
-              <a href="">View Report</a>
+            <div className="w-72 h-32 rounded-md bg-[#18252C] ">
+              <p className="text-[#9DB0B9] text-sm">Latest Score</p>
+              <h1 className="text-[#E5E7EB]">89%</h1>
+              <a href="" className="text-[#53A5ED] text-xs">View Report</a>
             </div>
           </div>
-        </div>
 
         {/* Interview Filters & Cards For Dashboard Page */}
 
         <div className="myInterviews">
           {/* Section 1  */}
-          <div className="">
+          <div className="flex items-center justify-between">
             <div>
-              <h2>My Interviews</h2>
-              <div>
+              <h2 className="font-extrabold text-xl">My Interviews</h2>
+              <div className="flex gap-4">
                 {/* Filter 1 */}
                 <div>
                   <DropdownMenu>
@@ -108,7 +106,7 @@ const DashboardPage = () => {
                     <Button
                       variant="secondary"
                       size="sm"
-                      className="flex items-center gap-2 rounded-full"
+                      className="flex text-[#9DB0B9] bg-[#18252C] items-center gap-2 rounded-md"
                     >
                       Role
                       <ChevronDown className="h-4 w-4" />
@@ -130,7 +128,7 @@ const DashboardPage = () => {
                     <Button
                       variant="secondary"
                       size="sm"
-                      className="flex items-center gap-2 rounded-full"
+                      className="flex text-[#9DB0B9] bg-[#18252C] items-center gap-2 rounded-md"
                     >
                       Date Range
                       <ChevronDown className="h-4 w-4" />
@@ -151,7 +149,7 @@ const DashboardPage = () => {
                     <Button
                       variant="secondary"
                       size="sm"
-                      className="flex items-center gap-2 rounded-full"
+                      className="flex text-[#9DB0B9] bg-[#18252C] items-center gap-2 rounded-md"
                     >
                       Package
                       <ChevronDown className="h-4 w-4" />
@@ -168,7 +166,7 @@ const DashboardPage = () => {
               </div>
             </div>
             <div>
-              <Button>
+              <Button className="flex justify-evenly px-4 py-4 bg-linear-to-r from-[#DE7478] to-[#8593DE]">
                 <Plus/>
                 Add Interview
               </Button>
@@ -179,7 +177,7 @@ const DashboardPage = () => {
             {/* main for cards  */}
             <div>
               <div>
-                <img src="" alt="Interview Card Image" />
+                <img className="w-50 h-34" src="/Fullstack.jpg" alt="Interview Card Image" />
                 <h3>Software Engineer Intern</h3>
                 <p>Google</p>
                 <div>
@@ -193,7 +191,7 @@ const DashboardPage = () => {
               </div>
               {/* Card - 2 */}
               <div>
-                <img src="" alt="Interview Card Image" />
+                <img className="w-50 h-34" src="/ProductMan.jpg" alt="Interview Card Image" />
                 <h3>Software Engineer Intern</h3>
                 <p>Google</p>
                 <div>
@@ -207,7 +205,7 @@ const DashboardPage = () => {
               </div>
               {/* Card - 3 */}
               <div>
-                <img src="" alt="Interview Card Image" />
+                <img className="w-50 h-34" src="/data analysis.jpg" alt="Interview Card Image" />
                 <h3>Software Engineer Intern</h3>
                 <p>Google</p>
                 <div>
@@ -221,7 +219,7 @@ const DashboardPage = () => {
               </div>
               {/* Card - 4 */}
               <div>
-                <img src="" alt="Interview Card Image" />
+                <img className="w-50 h-34" src="/uiux.jpg" alt="Interview Card Image" />
                 <h3>Software Engineer Intern</h3>
                 <p>Google</p>
                 <div>
