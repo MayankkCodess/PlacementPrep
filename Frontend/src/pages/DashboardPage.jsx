@@ -20,23 +20,30 @@ import { Plus } from "lucide-react";
 
 const DashboardPage = () => {
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-[70%]">
+    <div className="w-full flex justify-center ">
+      <div className="w-[1054px]">
         {/* Top Navbar For Dashboard Page */}
 
-        <div className="navbar flex ">
-          <img
+        <div className="navbar flex justify-between">
+          <div className="flex gap-2 items-center">
+            <img
             className="w-8 h-8"
             src="https://www.logoai.com/oss/icons/2021/12/02/SU8HhT2n6tL-p-_.png"
             alt="PlacementPrep Logo"
           />
           <h2>PlacementPrep</h2>
-          <Search />
-          <Input />
+          </div>
 
-          {/* DropDown For Notification Icon */}
+          <div className="relative ">
+          <Search className="absolute left-3 top-1/5"/>
+          <Input className=" w-[482px] pl-10 bg-[#18252C]" placeholder="Search companies, roles..."/>
+          </div>
+          
 
-          <DropdownMenu>
+        
+          <div className="flex items-center gap-2">
+              {/* DropDown For Notification Icon */}
+             <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="relative">
                 <Bell className="h-5 w-5" />
@@ -49,9 +56,8 @@ const DashboardPage = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Profile DropDown  */}
-
-          <DropdownMenu>
+           {/* Profile DropDown  */}
+             <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Avatar className="cursor-pointer">
                 <AvatarImage src="/avatar.png" />
@@ -67,26 +73,38 @@ const DashboardPage = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          </div>
+         
         </div>
         <hr />
 
         {/* Statistics Cards For Dashboard Page*/}
 
         <div className="flex justify-between">
-          <div className="w-72 rounded-md bg-[#18252C]">
-            <p className="text-[#9DB0B9] text-sm">Recent Interviews</p>
+          <div className="w-72 rounded-md bg-[#18252C] px-4 py-6">
+            <div className="">
+                 <p className="text-[#9DB0B9] text-sm">Recent Interviews</p>
             <h1 className="text-[#E5E7EB]">5</h1>
             <a href="" className="text-[#53A5ED] text-xs">
               View All
             </a>
+            </div>
+           
           </div>
-          <div className="w-72 rounded-md bg-[#18252C]">
+           <div className="w-72 rounded-xl bg-[#18252C] p-6">
+    <div className="flex flex-col gap-2">
+      <p className="text-sm text-[#9DB0B9]">Upcoming Mock</p>
+      <h1 className="text-2xl font-bold text-white">Dec 15, 2023</h1>
+      <a className="text-sm text-[#00BFFF]">View Schedule</a>
+    </div>
+  </div>
+          {/* <div className="w-72 rounded-md bg-[#18252C]">
             <p className="text-[#9DB0B9] text-sm">Upcoming Mock</p>
             <h1 className="text-[#E5E7EB] font-extrabold">Dec 15,2023</h1>
             <a href="" className="text-[#53A5ED] text-xs">
               View Schedule
             </a>
-          </div>
+          </div> */}
           <div className="w-72 h-32 rounded-md bg-[#18252C] ">
             <p className="text-[#9DB0B9] text-sm">Latest Score</p>
             <h1 className="text-[#E5E7EB]">89%</h1>
