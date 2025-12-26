@@ -1,12 +1,25 @@
-import './App.css'
-import DashboardPage from './pages/DashboardPage.jsx'
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import DashboardPage from "./pages/DashboardPage.jsx";
+import InterviewsPage from "./pages/InterviewsPage.jsx"
 function App() {
-
+  const appRouter = createBrowserRouter([
+    {
+      path: "/dashboard",
+      element: <DashboardPage />,
+    },{
+      path: "/interviews",
+      element: <InterviewsPage/>
+    },{
+      path:"/",
+      element:<DashboardPage/>
+    }
+  ]);
   return (
     <>
-     <DashboardPage/>
+    <RouterProvider router = {appRouter}/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
