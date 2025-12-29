@@ -17,10 +17,6 @@ function App() {
       path:"/",
       element:<DashboardPage/>
     },
-    {
-      path:"/result",
-      element:<MCQDisplay/>
-    }
   ]);
   return (
     <>
